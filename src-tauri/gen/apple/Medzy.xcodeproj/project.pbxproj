@@ -1,0 +1,479 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 63;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1A0F6652E9D47D8AE862B63B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDADB59981A5D1B2421DC2E5 /* CoreGraphics.framework */; };
+		41AE6C080F5CE3D7B22CD366 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = D0AAB3E2FCB0DC49AC05E821 /* main.mm */; };
+		53AE908D9BB3B5B9F1E33986 /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D54D34074C84A997BFA0D848 /* Metal.framework */; };
+		76C2145308D3AE290FEACE34 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5917E00244AC02F7D6B0E2DB /* WebKit.framework */; };
+		8CB0EFDA2CD16FC7BA662849 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 037422CE3CF803CFA1C1E73C /* QuartzCore.framework */; };
+		9E30CE1B5C286D7A3A761909 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 739018019DEA6870FC19234B /* Assets.xcassets */; };
+		A58D7ABDD630D089ED2550B7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5289128AC708BD7770C53CA8 /* UIKit.framework */; };
+		AFBE792DBF1A645F8E255C80 /* assets in Resources */ = {isa = PBXBuildFile; fileRef = D7DF1886471C7049FD8AC0C6 /* assets */; };
+		C14E5F30F18F450BA74F10A5 /* MetalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 922E1FDFB0B36E3D37D11EF9 /* MetalKit.framework */; };
+		DE4012654513C8AFCDE4AE6A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F96D3628730CE9A92EB217FD /* LaunchScreen.storyboard */; };
+		DEEA518F93CDCDF6A3269802 /* libapp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CD19DB1DED098EA83FDE3B84 /* libapp.a */; };
+		FA9F5A00B87906D00908CBCF /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A40C27F636BB5512D9573070 /* Security.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		037422CE3CF803CFA1C1E73C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		0E88C20BED43773FA0B04E6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		1C39CA3D46CA3ACA51CD6F14 /* main.rs */ = {isa = PBXFileReference; lastKnownFileType = text; path = main.rs; sourceTree = "<group>"; };
+		5289128AC708BD7770C53CA8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		5735A60E5B08040171B2CE46 /* bindings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = bindings.h; sourceTree = "<group>"; };
+		5917E00244AC02F7D6B0E2DB /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		739018019DEA6870FC19234B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		79FE63FDC299B390A7417585 /* Medzy_iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Medzy_iOS.entitlements; sourceTree = "<group>"; };
+		922E1FDFB0B36E3D37D11EF9 /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = System/Library/Frameworks/MetalKit.framework; sourceTree = SDKROOT; };
+		A40C27F636BB5512D9573070 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		CD19DB1DED098EA83FDE3B84 /* libapp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libapp.a; sourceTree = "<group>"; };
+		CDADB59981A5D1B2421DC2E5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		D0AAB3E2FCB0DC49AC05E821 /* main.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
+		D54D34074C84A997BFA0D848 /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
+		D7DF1886471C7049FD8AC0C6 /* assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = assets; sourceTree = SOURCE_ROOT; };
+		E8EE8DFD3F993EC4C605FE6F /* Medzy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Medzy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F88478B06BAF0A85CD2DABCC /* lib.rs */ = {isa = PBXFileReference; lastKnownFileType = text; path = lib.rs; sourceTree = "<group>"; };
+		F96D3628730CE9A92EB217FD /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E873B6A3A83C5BE1334EB70A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DEEA518F93CDCDF6A3269802 /* libapp.a in Frameworks */,
+				1A0F6652E9D47D8AE862B63B /* CoreGraphics.framework in Frameworks */,
+				53AE908D9BB3B5B9F1E33986 /* Metal.framework in Frameworks */,
+				C14E5F30F18F450BA74F10A5 /* MetalKit.framework in Frameworks */,
+				8CB0EFDA2CD16FC7BA662849 /* QuartzCore.framework in Frameworks */,
+				FA9F5A00B87906D00908CBCF /* Security.framework in Frameworks */,
+				A58D7ABDD630D089ED2550B7 /* UIKit.framework in Frameworks */,
+				76C2145308D3AE290FEACE34 /* WebKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		220253AE3DEAA9102BA5D2D5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E8EE8DFD3F993EC4C605FE6F /* Medzy.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		24C6F0F8B08DE07C66F2E4BC /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				3EE027E28487FC6B79D09A58 /* Medzy */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		3EE027E28487FC6B79D09A58 /* Medzy */ = {
+			isa = PBXGroup;
+			children = (
+				D0AAB3E2FCB0DC49AC05E821 /* main.mm */,
+				7ECD32C20D0E2FF67B6410B4 /* bindings */,
+			);
+			path = Medzy;
+			sourceTree = "<group>";
+		};
+		7ECD32C20D0E2FF67B6410B4 /* bindings */ = {
+			isa = PBXGroup;
+			children = (
+				5735A60E5B08040171B2CE46 /* bindings.h */,
+			);
+			path = bindings;
+			sourceTree = "<group>";
+		};
+		A2E3C87595DD13DEDA9736F5 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				F88478B06BAF0A85CD2DABCC /* lib.rs */,
+				1C39CA3D46CA3ACA51CD6F14 /* main.rs */,
+			);
+			name = src;
+			path = ../../src;
+			sourceTree = "<group>";
+		};
+		ACBE792F95054D59BE9ABE52 /* Externals */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Externals;
+			sourceTree = "<group>";
+		};
+		B4668C711ECA112AB94B0679 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CDADB59981A5D1B2421DC2E5 /* CoreGraphics.framework */,
+				CD19DB1DED098EA83FDE3B84 /* libapp.a */,
+				D54D34074C84A997BFA0D848 /* Metal.framework */,
+				922E1FDFB0B36E3D37D11EF9 /* MetalKit.framework */,
+				037422CE3CF803CFA1C1E73C /* QuartzCore.framework */,
+				A40C27F636BB5512D9573070 /* Security.framework */,
+				5289128AC708BD7770C53CA8 /* UIKit.framework */,
+				5917E00244AC02F7D6B0E2DB /* WebKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EFEE587632FAA081F00FFA71 /* Medzy_iOS */ = {
+			isa = PBXGroup;
+			children = (
+				0E88C20BED43773FA0B04E6E /* Info.plist */,
+				79FE63FDC299B390A7417585 /* Medzy_iOS.entitlements */,
+			);
+			path = Medzy_iOS;
+			sourceTree = "<group>";
+		};
+		F585FD1417E238B3EB975808 = {
+			isa = PBXGroup;
+			children = (
+				D7DF1886471C7049FD8AC0C6 /* assets */,
+				739018019DEA6870FC19234B /* Assets.xcassets */,
+				F96D3628730CE9A92EB217FD /* LaunchScreen.storyboard */,
+				ACBE792F95054D59BE9ABE52 /* Externals */,
+				EFEE587632FAA081F00FFA71 /* Medzy_iOS */,
+				24C6F0F8B08DE07C66F2E4BC /* Sources */,
+				A2E3C87595DD13DEDA9736F5 /* src */,
+				B4668C711ECA112AB94B0679 /* Frameworks */,
+				220253AE3DEAA9102BA5D2D5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2B581FE71A7561A9439D301D /* Medzy_iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4700F79CAFB1F6C976D5B0A0 /* Build configuration list for PBXNativeTarget "Medzy_iOS" */;
+			buildPhases = (
+				1166BA95E533994594D7267E /* Build Rust Code */,
+				24669BB76DFECE575C1EAD07 /* Sources */,
+				AE76D7C47566D6D24F2BC227 /* Resources */,
+				E873B6A3A83C5BE1334EB70A /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Medzy_iOS;
+			packageProductDependencies = (
+			);
+			productName = Medzy_iOS;
+			productReference = E8EE8DFD3F993EC4C605FE6F /* Medzy.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E3EE18C004D528F02949C238 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+			};
+			buildConfigurationList = DED02DB7152FAEF9FDCD0688 /* Build configuration list for PBXProject "Medzy" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = F585FD1417E238B3EB975808;
+			minimizedProjectReferenceProxies = 1;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2B581FE71A7561A9439D301D /* Medzy_iOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AE76D7C47566D6D24F2BC227 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9E30CE1B5C286D7A3A761909 /* Assets.xcassets in Resources */,
+				DE4012654513C8AFCDE4AE6A /* LaunchScreen.storyboard in Resources */,
+				AFBE792DBF1A645F8E255C80 /* assets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1166BA95E533994594D7267E /* Build Rust Code */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Build Rust Code";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(SRCROOT)/Externals/x86_64/${CONFIGURATION}/libapp.a",
+				"$(SRCROOT)/Externals/arm64/${CONFIGURATION}/libapp.a",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "npm run -- tauri ios xcode-script -v --platform ${PLATFORM_DISPLAY_NAME:?} --sdk-root ${SDKROOT:?} --framework-search-paths \"${FRAMEWORK_SEARCH_PATHS:?}\" --header-search-paths \"${HEADER_SEARCH_PATHS:?}\" --gcc-preprocessor-definitions \"${GCC_PREPROCESSOR_DEFINITIONS:-}\" --configuration ${CONFIGURATION:?} ${FORCE_COLOR} ${ARCHS:?}";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		24669BB76DFECE575C1EAD07 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				41AE6C080F5CE3D7B22CD366 /* main.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		5763805F0F6089EB436B8E08 /* debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = debug;
+		};
+		6419BF1505D0D79898CD217B /* release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ARCHS = arm64;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Medzy_iOS/Medzy_iOS.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = 6H4MY6TQUL;
+				ENABLE_BITCODE = NO;
+				"EXCLUDED_ARCHS[sdk=iphoneos*]" = x86_64;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\".\"",
+				);
+				INFOPLIST_FILE = Medzy_iOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				"LIBRARY_SEARCH_PATHS[arch=arm64]" = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Externals/arm64/$(CONFIGURATION)",
+					"$(SDKROOT)/usr/lib/swift",
+					"$(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME)",
+					"$(TOOLCHAIN_DIR)/usr/lib/swift-5.0/$(PLATFORM_NAME)",
+				);
+				"LIBRARY_SEARCH_PATHS[arch=x86_64]" = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Externals/x86_64/$(CONFIGURATION)",
+					"$(SDKROOT)/usr/lib/swift",
+					"$(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME)",
+					"$(TOOLCHAIN_DIR)/usr/lib/swift-5.0/$(PLATFORM_NAME)",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.medzy.app;
+				PRODUCT_NAME = Medzy;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = arm64;
+			};
+			name = release;
+		};
+		EC7732527AD9B6DFCE579394 /* debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ARCHS = arm64;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Medzy_iOS/Medzy_iOS.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = 6H4MY6TQUL;
+				ENABLE_BITCODE = NO;
+				"EXCLUDED_ARCHS[sdk=iphoneos*]" = x86_64;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\".\"",
+				);
+				INFOPLIST_FILE = Medzy_iOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				"LIBRARY_SEARCH_PATHS[arch=arm64]" = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Externals/arm64/$(CONFIGURATION)",
+					"$(SDKROOT)/usr/lib/swift",
+					"$(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME)",
+					"$(TOOLCHAIN_DIR)/usr/lib/swift-5.0/$(PLATFORM_NAME)",
+				);
+				"LIBRARY_SEARCH_PATHS[arch=x86_64]" = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Externals/x86_64/$(CONFIGURATION)",
+					"$(SDKROOT)/usr/lib/swift",
+					"$(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME)",
+					"$(TOOLCHAIN_DIR)/usr/lib/swift-5.0/$(PLATFORM_NAME)",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.medzy.app;
+				PRODUCT_NAME = Medzy;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = arm64;
+			};
+			name = debug;
+		};
+		F43596678E5EB640DF902ED1 /* release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4700F79CAFB1F6C976D5B0A0 /* Build configuration list for PBXNativeTarget "Medzy_iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC7732527AD9B6DFCE579394 /* debug */,
+				6419BF1505D0D79898CD217B /* release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = debug;
+		};
+		DED02DB7152FAEF9FDCD0688 /* Build configuration list for PBXProject "Medzy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5763805F0F6089EB436B8E08 /* debug */,
+				F43596678E5EB640DF902ED1 /* release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E3EE18C004D528F02949C238 /* Project object */;
+}

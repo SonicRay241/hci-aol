@@ -1,100 +1,123 @@
 "use client";
-import { RoundedButton } from "@/components/RoundedButton";
-import { invoke } from "@tauri-apps/api/core";
-import Image from "next/image";
-import { useCallback, useState } from "react";
 
-export default function Home() {
-  const [greeted, setGreeted] = useState<string | null>(null);
-  const greet = useCallback((): void => {
-    invoke<string>("greet")
-      .then((s) => {
-        setGreeted(s);
-      })
-      .catch((err: unknown) => {
-        console.error(err);
-      });
-  }, []);
+import SearchIcon from "@/components/icons/search";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card"
+import {
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
+} from "@/components/ui/avatar"
+import { Input } from "@/components/ui/input";
+import { BellDotIcon, FileClockIcon, HospitalIcon, ScanLineIcon, UserCheck2Icon, UserCheckIcon, UserIcon } from "lucide-react";
+import { useRouter } from "next/navigation";
+import { ReactNode, useEffect, useState } from "react";
+import SearchBar from "@/components/searchbar";
+
+export default function Page() {
+  const [loadMain, setLoadMain] = useState(false)
+  const router = useRouter()
+
+  useEffect(() => {
+    const first = localStorage.getItem("appStarted")
+
+    if (first == "true") setLoadMain(true)
+    else router.push("/start")
+  }, [])
+
+  if (!loadMain) {
+    <></>
+  }
 
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex flex-col gap-2 items-start">
-          <RoundedButton
-            onClick={greet}
-            title="Call &quot;greet&quot; from Rust"
-          />
-          <p className="break-words w-md">
-            {greeted ?? "Click the button to call the Rust function"}
-          </p>
+    <main className="pt-6 space-y-3 pb-16">
+      <TopBar/>
+      <div className="px-6 space-y-3">
+        <div className="mt-[30%] mb-6">
+          <h1 className="text-foreground/50 text-5xl font-semibold">Hi there,</h1>
+          <h1 className="text-5xl font-semibold">How can I help you today?</h1>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+        <SearchBar
+          onClick={() => {
+            router.push("/search")
+          }}
+          readOnly
+        />
+        <div className="grid grid-cols-2 gap-2">
+          <OptionCard
+            title="Scan"
+            description="Scan your prescription"
+            route="/scan"
+          >
+            <ScanLineIcon className="text-primary size-12 -translate-x-1 stroke-[1.5]" />
+          </OptionCard>
+          <OptionCard
+            title="Check Up"
+            description="Simple health check up"
+            route="/checkup"
+          >
+            <UserCheckIcon className="text-primary size-12 stroke-[1.5]" />
+          </OptionCard>
+          <OptionCard
+            title="Hospitals"
+            description="List of hospitals nearby"
+            route="/hospitals"
+          >
+            <HospitalIcon className="text-primary size-12 -translate-x-1 stroke-[1.5]" />
+          </OptionCard>
+          <OptionCard
+            title="History"
+            description="Your medication history"
+            route="/history"
+          >
+            <FileClockIcon className="text-primary size-12 -translate-x-1 stroke-[1.5]" />
+          </OptionCard>
+        </div>
+      </div>
+    </main>
+  )
+}
+
+function TopBar() {
+  return (
+    <nav className="flex justify-between pl-6 pr-5">
+      <Avatar className="size-11">
+        <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
+        <AvatarFallback>CN</AvatarFallback>
+      </Avatar>
+      <Button
+        size="icon"
+        variant="ghost"
+        className="rounded-full size-10"
+      >
+        <BellDotIcon className="size-8 stroke-[1.5]"/>
+      </Button>
+    </nav>
+  )
+}
+
+function OptionCard(props: {
+  title: string,
+  description: string,
+  children: ReactNode,
+  route: string
+}) {
+  const router = useRouter()
+
+  return (
+    <Card className="active:bg-secondary" onClick={() => router.push(props.route)}>
+      <CardContent className="space-y-1">
+        {props.children}
+        <h2 className="text-xl font-semibold">{props.title}</h2>
+        <p className="text-xs">{props.description}</p>
+      </CardContent>
+    </Card>
+  )
 }
